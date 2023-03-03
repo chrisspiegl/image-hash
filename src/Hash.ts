@@ -33,6 +33,10 @@ export default class Hash
 
     private calcuateHexadecimal(binalyNumbers: (0|1)[])
     {
+        return this.calculateHexadecimal(binalyNumbers)
+    }
+    private calculateHexadecimal(binalyNumbers: (0|1)[])
+    {
         return this.arrayChunk(binalyNumbers, 4)
             .map(row => parseInt(row.join(''), 2).toString(16)).join('');
     }
